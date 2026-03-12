@@ -61,6 +61,36 @@ section{
 min-height:100vh;
 padding:10rem 9% 5rem;
 }
+.education-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:3rem;
+}
+
+.edu-card{
+background:#111;
+padding:2.5rem;
+width:300px;
+border-radius:1rem;
+border:2px solid #b74b4b;
+text-align:center;
+transition:0.3s;
+}
+
+.edu-card h3{
+font-size:2rem;
+margin-bottom:1rem;
+}
+
+.edu-card p{
+font-size:1.4rem;
+margin:0.4rem 0;
+}
+
+.edu-card:hover{
+transform:scale(1.05);
+}
 
 /* HOME */
 
