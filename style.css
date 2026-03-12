@@ -140,20 +140,16 @@ margin-bottom:5rem;
 /* SKILLS */
 
 .skills-container{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(2,1fr);
 gap:2rem;
+max-width:800px;
+margin:auto;
 }
-
 .skill-box{
 background:#111;
 padding:2rem;
-width:250px;
-border-radius:1rem;
-text-align:center;
-border:2px solid #b74b4b;
-}
+width:100%;
 
 .skill-box:hover{
 transform:scale(1.05);
