@@ -31,7 +31,7 @@
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Container */
-    --container-width: 1100px;
+    --container-width: 100%;
 }
 
 * {
@@ -43,6 +43,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 
 body {
@@ -123,7 +124,7 @@ h1, h2, h3, h4, h5 {
     font-size: 1rem;
     cursor: pointer;
     transition: var(--transition-normal);
-    border: none;
+    border: 1px solid transparent;
 }
 
 .btn-primary {
@@ -133,6 +134,18 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--accent-primary);
+}
+
+.btn-outline:hover {
+    background: rgba(129, 140, 248, 0.1);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px var(--accent-glow);
 }
@@ -284,6 +297,7 @@ h1, h2, h3, h4, h5 {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .social-icons {
@@ -366,7 +380,7 @@ h1, h2, h3, h4, h5 {
 /* --- Skills Section --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 2rem;
 }
 
@@ -439,7 +453,7 @@ h1, h2, h3, h4, h5 {
 /* --- Projects Section --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
     gap: 2.5rem;
 }
 
@@ -664,7 +678,7 @@ h1, h2, h3, h4, h5 {
 /* Certs Grid */
 .certs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 1.5rem;
 }
 
@@ -842,35 +856,41 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Intersection Observer Classes */
-.fade-in {
+.js-enabled .fade-in {
     opacity: 0;
     transform: translateY(30px);
+}
+.fade-in {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.fade-in.appear {
+.js-enabled .fade-in.appear {
     opacity: 1;
     transform: translateY(0);
 }
 
-.fade-in-right {
+.js-enabled .fade-in-right {
     opacity: 0;
     transform: translateX(50px);
+}
+.fade-in-right {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.fade-in-right.appear {
+.js-enabled .fade-in-right.appear {
     opacity: 1;
     transform: translateX(0);
 }
 
-.stagger-card {
+.js-enabled .stagger-card {
     opacity: 0;
     transform: translateY(30px);
+}
+.stagger-card {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.stagger-card.appear {
+.js-enabled .stagger-card.appear {
     opacity: 1;
     transform: translateY(0);
 }
