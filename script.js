@@ -1,8 +1,21 @@
 // Add js-enabled class only when script executes successfully
 document.documentElement.classList.add('js-enabled');
 
+// Definitively disable scroll caching and force top of page
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+// Strip hash from URL if someone saves a link to #contact
+if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+}
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 0. Awwwards Page Loader
     const loaderScreen = document.getElementById('loader-screen');
     const loaderPercent = document.getElementById('loader-percent');
@@ -837,6 +850,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('form-email').value;
             const msg = document.getElementById('form-msg').value;
 
+            // Submit AJAX request in background via Web3Forms
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: "5331804a-360f-451a-88d9-b5dd119e126c",
+                    name: name,
+                    email: email,
+                    message: msg
+                })
+            }).catch(e => console.log(e));
+
             // Step 1: Encrypting
             setTimeout(() => {
                 const encDiv = document.createElement('div');
@@ -849,7 +877,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const routeDiv = document.createElement('div');
                 routeDiv.className = 'text-cyan-400 mt-1';
-                routeDiv.textContent = `[SYSTEM] DETECTING ROUTE TO sinanmssk@gmail.com...`;
+                routeDiv.textContent = `[SYSTEM] ROUTING PAYLOAD TO sinanmssk@gmail.com...`;
                 termLogs.appendChild(routeDiv);
             }, 1200);
 
@@ -857,12 +885,12 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const succDiv = document.createElement('div');
                 succDiv.className = 'text-green-400 font-bold mt-1';
-                succDiv.textContent = `[SUCCESS] HANDSHAKE STABLISHED. PACKAGE DELIVERED TO sinanmssk@gmail.com.`;
+                succDiv.textContent = `[SUCCESS] HANDSHAKE ESTABLISHED. SECURE PACKAGE DELIVERED!`;
                 termLogs.appendChild(succDiv);
 
                 // Reset inputs
                 termForm.reset();
-            }, 1800);
+            }, 2000);
         });
     }
 

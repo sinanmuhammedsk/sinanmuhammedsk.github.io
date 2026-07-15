@@ -97,7 +97,7 @@
                         intelligent ML pipelines, and designing RAG-powered AI systems that solve real-world problems.
                     </p>
                     <div class="contact-links">
-                        <a href="mailto:sinanmssk@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i>
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i>
                             Contact
                             Me</a>
                         <a href="https://drive.google.com/file/d/1M3XfzDQn9lenbYMRQRtKOSVsqS4I58dd/view?usp=sharing"
@@ -1072,13 +1072,14 @@ model.fit(dataset.train_data, dataset.train_labels)</code></pre>
                         <div class="text-slate-400 mb-4">&gt;&gt; Input contact properties to transmit message
                             package...</div>
 
-                        <form id="terminal-form" class="space-y-6">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="terminal-form" class="space-y-6">
+                            <input type="hidden" name="access_key" value="5331804a-360f-451a-88d9-b5dd119e126c">
                             <!-- Name prompt -->
                             <div class="flex flex-col gap-2">
                                 <label for="form-name"
                                     class="text-violet-400 font-bold flex items-center gap-2"><span>[SYS_PROMPT_NAME]:</span><span
                                         class="animate-pulse text-cyan-400">▮</span></label>
-                                <input type="text" id="form-name" required placeholder="system.ident"
+                                <input type="text" id="form-name" name="name" required placeholder="system.ident"
                                     class="w-full bg-slate-900 border border-slate-800 focus:border-cyan-400/50 rounded-lg px-4 py-3 text-slate-200 outline-none transition-all duration-300 font-mono">
                             </div>
 
@@ -1087,7 +1088,7 @@ model.fit(dataset.train_data, dataset.train_labels)</code></pre>
                                 <label for="form-email"
                                     class="text-violet-400 font-bold flex items-center gap-2"><span>[SYS_PROMPT_EMAIL]:</span><span
                                         class="animate-pulse text-cyan-400">▮</span></label>
-                                <input type="email" id="form-email" required placeholder="user@domain.com"
+                                <input type="email" id="form-email" name="email" required placeholder="user@domain.com"
                                     class="w-full bg-slate-900 border border-slate-800 focus:border-cyan-400/50 rounded-lg px-4 py-3 text-slate-200 outline-none transition-all duration-300 font-mono">
                             </div>
 
@@ -1096,20 +1097,18 @@ model.fit(dataset.train_data, dataset.train_labels)</code></pre>
                                 <label for="form-msg"
                                     class="text-violet-400 font-bold flex items-center gap-2"><span>[SYS_PROMPT_MESSAGE]:</span><span
                                         class="animate-pulse text-cyan-400">▮</span></label>
-                                <textarea id="form-msg" required rows="4" placeholder="awaiting input stream..."
+                                <textarea id="form-msg" name="message" required rows="4" placeholder="awaiting input stream..."
                                     class="w-full bg-slate-900 border border-slate-800 focus:border-cyan-400/50 rounded-lg px-4 py-3 text-slate-200 outline-none transition-all duration-300 font-mono resize-none"></textarea>
-                            </div>
-
-                            <button type="submit"
+                               <button type="submit" id="transmit-btn"
+                                style="position:relative;z-index:9999;cursor:pointer;"
                                 class="w-full bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/20 active:scale-[0.98] transition-all duration-200 tracking-wider flex items-center justify-center gap-3">
                                 <i class="fas fa-paper-plane text-xs"></i> TRANSMIT DATA STREAM
                             </button>
                         </form>
 
                         <!-- Terminal status logs area -->
-                        <div id="terminal-logs" class="mt-6 space-y-2 border-t border-slate-800 pt-4 hidden">
-                            <div class="text-slate-500 mt-1">[SYSTEM] COMPILING DATA PACKETS...</div>
-                        </div>
+                        <div id="terminal-logs" class="mt-6 space-y-2 border-t border-slate-800 pt-4 hidden font-mono text-sm"></div>
+
                     </div>
                 </div>
             </div>
