@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinan Muhammed Shaman S K | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Sinan Muhammed Shaman S K - Data Science & Machine Learning Enthusiast">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: {
+                            50: '#f8fafc',
+                            900: '#0f172a',
+                            950: '#030712',
+                        },
+                        cyber: '#06b6d4',
+                        neon: '#8b5cf6',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['Fira Code', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Next-Gen Awwwards Loader -->
+    <div id="loader-screen"
+        class="fixed inset-0 bg-[#030712] z-[9999] flex flex-col justify-center items-center font-sans">
+        <div class="text-cyber text-2xl font-mono tracking-widest mb-6 animate-pulse">&lt;SYSTEM_LOAD&gt;</div>
+        <div class="relative w-80 h-1 bg-[#1e293b] border border-cyber/20 rounded-full overflow-hidden mb-3">
+            <div id="loader-bar"
+                class="absolute top-0 left-0 h-full w-0 bg-gradient-to-r from-cyan-400 via-violet-500 to-cyan-400 shadow-[0_0_12px_rgba(6,182,212,0.8)]">
+            </div>
+        </div>
+        <div class="text-cyber/80 font-mono text-sm tracking-wide"><span id="loader-percent">00</span>% COMPLETED</div>
+        <div class="text-xs text-slate-500 font-mono mt-8 uppercase tracking-widest animate-pulse">Initializing AI
+            Neural Core</div>
+    </div>
+
+    <!-- Magnetic & Particle Cursor -->
+    <div id="custom-cursor"
+        class="fixed w-8 h-8 rounded-full border border-cyan-400/40 pointer-events-none transform -translate-x-1/2 -translate-y-1/2 z-[10000] mix-blend-difference hidden md:block transition-transform duration-100 ease-out">
+        <div class="absolute inset-1.5 rounded-full bg-violet-500/30 blur-[2px] animate-ping"></div>
+        <div class="absolute inset-3.5 rounded-full bg-cyan-400"></div>
+    </div>
+    <canvas id="cursor-particles" class="fixed inset-0 pointer-events-none z-[9998] hidden md:block"></canvas>
+
+    <div class="blob-bg"></div>
+    <div class="blob-bg blob-bg-2"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">S<span>M</span><span>S</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#training">Training & Certs</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / About Section -->
+    <section id="about" class="hero">
+        <canvas id="neural-canvas"></canvas>
+        <div class="container hero-container">
+            <div class="hero-flex-layout">
+                <div class="hero-content fade-in">
+                    <p class="greeting">Data Science &amp; ML Engineer</p>
+                    <h1 class="name">Sinan Muhammed Shaman S K</h1>
+                    <h2 class="title"
+                        style="min-height: 2.2rem; display: flex; align-items: center; justify-content: flex-start;">
+                        <span id="typed-text" class="text-cyber font-semibold"></span><span
+                            class="typed-cursor animate-pulse text-cyan-400 font-light"
+                            style="font-size: 1.5rem; margin-left: 2px;">|</span></h2>
+                    <p class="bio">
+                        Specializing in <span style="color:#06b6d4;font-weight:600;">Data Science &amp; Machine
+                            Learning</span> at LPU. Passionate about building data-driven applications, training
+                        intelligent ML pipelines, and designing RAG-powered AI systems that solve real-world problems.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:sinanmssk@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i>
+                            Contact
+                            Me</a>
+                        <a href="https://drive.google.com/file/d/1M3XfzDQn9lenbYMRQRtKOSVsqS4I58dd/view?usp=sharing"
+                            target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
+                        <div class="social-icons">
+                            <a href="https://linkedin.com/in/sinanmuhammedsk" target="_blank" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/sinanmuhammedsk" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="tel:+919037391646" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="hero-image fade-in-right relative flex items-center justify-center min-h-[360px] md:min-h-[440px] w-full md:w-auto">
+                    <!-- 3D Constellation Orbit Rings -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                        <div
+                            class="w-[280px] h-[280px] md:w-[350px] md:h-[350px] border border-cyan-500/20 rounded-full border-dashed animate-[spin_40s_linear_infinite]">
+                        </div>
+                        <div
+                            class="absolute w-[340px] h-[340px] md:w-[410px] md:h-[410px] border border-violet-500/10 rounded-full border-dashed animate-[spin_25s_linear_infinite_reverse]">
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper relative z-10">
+                        <div class="profile-img-container relative">
+                            <!-- Holographic Overlay Layers -->
+                            <div
+                                class="absolute inset-0 rounded-full bg-gradient-to-t from-cyan-500/10 to-transparent mix-blend-screen pointer-events-none z-20">
+                            </div>
+                            <div
+                                class="hologram-scanner absolute left-0 w-full h-[3px] bg-cyan-400 opacity-70 z-30 pointer-events-none shadow-[0_0_12px_#06b6d4]">
+                            </div>
+                            <div
+                                class="absolute inset-0 rounded-full border border-cyan-400/50 shadow-[0_0_20px_rgba(6,182,212,0.3)] pointer-events-none z-20">
+                            </div>
+
+                            <div
+                                class="profile-photo-frame filter hue-rotate-[340deg] saturate-[1.1] brightness-[1.05]">
+                                <img src="assets/profile.jpg?v=update2" alt="Sinan Muhammed Shaman S K"
+                                    class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- 3D Orbiting Skill Icons (will animate in JS) -->
+                            <div class="orbit-icon absolute w-10 h-10 rounded-xl bg-slate-900/90 border border-cyan-400/30 flex items-center justify-center text-cyan-400 hover:text-white shadow-[0_0_15px_rgba(6,182,212,0.2)] cursor-pointer transition-all z-30"
+                                id="orbit-py" title="Python"><i class="fab fa-python text-lg"></i></div>
+                            <div class="orbit-icon absolute w-10 h-10 rounded-xl bg-slate-900/90 border border-violet-400/30 flex items-center justify-center text-violet-400 hover:text-white shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer transition-all z-30"
+                                id="orbit-db" title="SQL"><i class="fas fa-database text-lg"></i></div>
+                            <div class="orbit-icon absolute w-10 h-10 rounded-xl bg-slate-900/90 border border-cyan-400/30 flex items-center justify-center text-cyan-400 hover:text-white shadow-[0_0_15px_rgba(6,182,212,0.2)] cursor-pointer transition-all z-30"
+                                id="orbit-ml" title="Machine Learning"><i class="fas fa-brain text-lg"></i></div>
+                            <div class="orbit-icon absolute w-10 h-10 rounded-xl bg-slate-900/90 border border-violet-400/30 flex items-center justify-center text-violet-400 hover:text-white shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer transition-all z-30"
+                                id="orbit-rag" title="NLP & RAG"><i class="fas fa-project-diagram text-lg"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jupyter Code Console Widget -->
+            <div class="jupyter-console fade-in">
+                <div class="console-header">
+                    <div class="console-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+                    <div class="console-title"><i class="fas fa-terminal"></i> jupyter_notebook_sim.ipynb</div>
+                    <div class="console-status">Kernel: Python 3 (ipykernel)</div>
+                </div>
+                <div class="console-body">
+                    <div class="console-line">
+                        <span class="line-in">In [1]:</span>
+                        <pre
+                            class="line-code"><code><span class="code-keyword">import</span> scikit_learn <span class="code-keyword">as</span> sklearn
+<span class="code-keyword">from</span> models <span class="code-keyword">import</span> NeuralDatasetRegressor
+dataset = load_data(<span class="code-string">'student_performance'</span>) <span class="code-comment"># 1,000+ records</span></code></pre>
+                    </div>
+                    <div class="console-line">
+                        <span class="line-in">In [2]:</span>
+                        <pre class="line-code"><code>model = NeuralDatasetRegressor(learning_rate=<span class="code-number">0.05</span>, epochs=<span class="code-number">5</span>)
+model.compile(optimizer=<span class="code-string">'adam'</span>, loss=<span class="code-string">'mse'</span>)
+model.fit(dataset.train_data, dataset.train_labels)</code></pre>
+                        <button id="run-console-btn" class="btn-console-run"><i class="fas fa-play"></i> Run
+                            Cell</button>
+                    </div>
+                    <div class="console-output" id="console-output-area">
+                        <span class="output-comment"># Click "Run Cell" to execute the model training
+                            simulation...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Skills Section -->
+        <section id="skills" class="section relative overflow-hidden bg-slate-950 py-24">
+            <div class="container relative z-10">
+                <div class="section-header fade-in mb-12">
+                    <h2
+                        class="section-title text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">
+                        Neural Skill Constellation</h2>
+                    <p class="text-slate-400 text-sm mt-3 font-mono">Move cursor to navigate the interactive technology
+                        map. Tap core categories to reveal specialized frameworks.</p>
+                    <div class="section-line bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-8 items-stretch min-h-[500px]">
+                    <!-- Interactive Canvas Area -->
+                    <div
+                        class="w-full lg:w-3/5 h-[500px] bg-slate-900/60 rounded-3xl border border-cyan-500/10 relative overflow-hidden backdrop-blur-md shadow-[0_0_50px_rgba(6,182,212,0.03)] cursor-pointer">
+                        <canvas id="skills-galaxy-canvas" class="absolute inset-0 w-full h-full"></canvas>
+                        <!-- Orbital instructions widget -->
+                        <div
+                            class="absolute bottom-4 left-4 font-mono text-[10px] text-slate-500 pointer-events-none uppercase tracking-wider flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                            Interactive Constellation Grid Active
+                        </div>
+                    </div>
+
+                    <!-- Domain Detail Cards -->
+                    <div class="w-full lg:w-2/5 min-h-[400px] lg:min-h-0 relative flex items-stretch">
+                        <div class="w-full h-full relative" id="skills-detail-container">
+                            <!-- Default State Panel -->
+                            <div
+                                class="skill-detail-panel active-panel bg-gradient-to-br from-slate-900/80 to-slate-950/80 border border-slate-800/50 p-8 rounded-3xl backdrop-blur-xl shadow-2xl transition-all duration-500 flex flex-col justify-center items-center text-center h-full">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-cyan-500/15 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-2xl mb-4 animate-pulse">
+                                    <i class="fas fa-network-wired"></i></div>
+                                <h3 class="text-xl font-semibold mb-2">Explore the AI Galaxy</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed max-w-sm">Hover or tap on any core
+                                    division node on the neural constellation map to reveal the specialized programming
+                                    frameworks, tools, and algorithms integrated inside my portfolio.</p>
+                            </div>
+
+                            <!-- Category 1: Languages -->
+                            <div class="skill-detail-panel hidden-panel opacity-0 translate-x-8 pointer-events-none absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-950/85 border border-cyan-500/20 p-8 rounded-3xl backdrop-blur-xl shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                                id="panel-languages">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl">
+                                            <i class="fas fa-code"></i></div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-white">Programming Languages</h3>
+                                            <p class="text-xs text-cyan-400 font-mono">Core Execution Logic</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Engineered backends and
+                                        algorithms. Python serves as the base for all predictive models, model
+                                        pipelines, and mathematical transforms.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">Python</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">SQL
+                                            / PL-SQL</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">C</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">Java</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-355 text-xs font-mono">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-4 border-t border-slate-800/85 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                                    <span>Systems Integration</span>
+                                    <span class="text-cyan-400">95% Proficiency</span>
+                                </div>
+                            </div>
+
+                            <!-- Category 2: Data Science & ML -->
+                            <div class="skill-detail-panel hidden-panel opacity-0 translate-x-8 pointer-events-none absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-950/85 border border-violet-500/20 p-8 rounded-3xl backdrop-blur-xl shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                                id="panel-dsml">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-400/20 flex items-center justify-center text-violet-400 text-xl">
+                                            <i class="fas fa-brain"></i></div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-white">Data Science & ML</h3>
+                                            <p class="text-xs text-violet-400 font-mono">Predictive Engineering</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Designing end-to-end Machine
+                                        Learning systems, from advanced exploratory analysis to real-time RAG context
+                                        retrievals and time-series demand networks.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">RAG
+                                            Architectures</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">Supervised
+                                            Learning</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">Time-Series
+                                            Forecasts</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800/80 text-slate-350 text-xs font-mono">Statistical
+                                            Modeling</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">Model
+                                            Optimization</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-4 border-t border-slate-800/85 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                                    <span>Predictive Accuracy</span>
+                                    <span class="text-violet-400">Advanced Domain</span>
+                                </div>
+                            </div>
+
+                            <!-- Category 3: Databases & Systems -->
+                            <div class="skill-detail-panel hidden-panel opacity-0 translate-x-8 pointer-events-none absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-955/85 border border-cyan-500/20 p-8 rounded-3xl backdrop-blur-xl shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                                id="panel-databases">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl">
+                                            <i class="fas fa-server"></i></div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-white">Databases & Systems</h3>
+                                            <p class="text-xs text-cyan-400 font-mono">Data Storage & Control</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Handling complex enterprise
+                                        structures. Proficient in database schemas, indexes, stored procedures,
+                                        triggers, and query adjustments.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">Oracle
+                                            SQL</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">MySQL
+                                            Engine</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">SQLite
+                                            DB</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">Git
+                                            & Version Control</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-4 border-t border-slate-800/85 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                                    <span>Query Processing</span>
+                                    <span class="text-cyan-400">Structured Storage</span>
+                                </div>
+                            </div>
+
+                            <!-- Category 4: Frameworks & Libraries -->
+                            <div class="skill-detail-panel hidden-panel opacity-0 translate-x-8 pointer-events-none absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-955/85 border border-violet-500/20 p-8 rounded-3xl backdrop-blur-xl shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                                id="panel-frameworks">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-400/20 flex items-center justify-center text-violet-400 text-xl">
+                                            <i class="fas fa-layer-group"></i></div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-white">Frameworks & Libraries</h3>
+                                            <p class="text-xs text-violet-400 font-mono">Development Core</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Integrated packages standard
+                                        in modern ML products, data preprocessing routines, and large language model
+                                        workflows.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">Scikit-learn</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">LangChain</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">Pandas
+                                            Toolkit</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">NumPy
+                                            Arrays</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">Matplotlib
+                                            & Seaborn</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-4 border-t border-slate-800/85 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                                    <span>Production Workflows</span>
+                                    <span class="text-violet-400">Data Science Stack</span>
+                                </div>
+                            </div>
+
+                            <!-- Category 5: Tools & Platforms -->
+                            <div class="skill-detail-panel hidden-panel opacity-0 translate-x-8 pointer-events-none absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-955/85 border border-cyan-500/20 p-8 rounded-3xl backdrop-blur-xl shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                                id="panel-tools">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div
+                                            class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xl">
+                                            <i class="fas fa-tools"></i></div>
+                                        <div>
+                                            <h3 class="text-lg font-semibold text-white">Tools & Platforms</h3>
+                                            <p class="text-xs text-cyan-400 font-mono">Reporting & Hosting</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">BI dashboards and hosting
+                                        systems used to share statistical models, load predictive analyses, and present
+                                        visual summaries.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-350 text-xs font-mono">Power
+                                            BI Reports</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-355 text-xs font-mono">Tableau
+                                            Desktop</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-355 text-xs font-mono">Jupyter
+                                            Notebooks</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-355 text-xs font-mono">Microsoft
+                                            Excel</span>
+                                        <span
+                                            class="px-3 py-1.5 rounded-lg bg-slate-955 border border-slate-800/80 text-slate-355 text-xs font-mono">Vercel
+                                            Deployment</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-4 border-t border-slate-800/85 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                                    <span>Deployment Pipelines</span>
+                                    <span class="text-cyan-400">BI Analytics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-light">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Data Science & ML Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Enterprise Premium AI SaaS System -->
+                    <div class="project-card stagger-card">
+                        <div class="project-image-preview">
+                            <img src="assets/aipdfsystem.png" alt="Enterprise AI PDF System Preview">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-folder"><i class="far fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/sinanmuhammedsk/aipdfsystem" target="_blank"
+                                        aria-label="GitHub Link" style="margin-right: 12px;"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://aipdfsystem.vercel.app" target="_blank"
+                                        aria-label="Live Demo Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Enterprise AI PDF System (aipdfsystem)</h3>
+                            <div class="project-date">Jun 26 – Jul 26</div>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Built an enterprise-grade Retrieval-Augmented Generation (RAG) tool supporting
+                                        multi-document ingestion and parsing.</li>
+                                    <li>Designed visual AI processing steps tracking document loading, chunk embedding,
+                                        and vector stores retrieval.</li>
+                                    <li>Implemented dual-state AI assistants providing context-grounded responses and
+                                        general conversation capability.</li>
+                                    <li>Overhauled layout ergonomics to support fluid sidebar states, dark obsidian
+                                        aesthetics, and sleek transitions.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Python / RAG</li>
+                                <li>LangChain</li>
+                                <li>Vector Databases</li>
+                                <li>Aesthetics / UX</li>
+                            </ul>
+                            <a href="https://aipdfsystem.vercel.app" target="_blank"
+                                class="text-cyber font-medium mt-4 hover:text-neon transition-colors duration-300 inline-flex items-center gap-2">Explore
+                                Live Deployment <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Demand Forecasting Platform -->
+                    <div class="project-card stagger-card">
+                        <div class="project-image-preview">
+                            <img src="assets/forecasting.png" alt="Demand Forecasting Dashboard Preview">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-folder"><i class="far fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/sinanmuhammedsk/inventory-demand-forecasting-platform"
+                                        target="_blank" aria-label="GitHub Link" style="margin-right: 12px;"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://inventory-demand-forecasting-platfo.vercel.app/" target="_blank"
+                                        aria-label="Live Demo Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Inventory & Demand Forecasting Platform</h3>
+                            <div class="project-date">Jun 26 – Jul 26</div>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Developed a client-side forecast dashboard that processes pre-aggregated supply
+                                        chain datasets with zero latency.</li>
+                                    <li>Programmed statistical predictive algorithms including Moving Averages and
+                                        Exponential Smoothing trends.</li>
+                                    <li>Constructed visualizations for inventory monitoring, safety stock thresholds,
+                                        and stock anomalies via Chart.js.</li>
+                                    <li>Ensured offline capability by optimizing file parsing structure as client-side
+                                        JavaScript calculations.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>JavaScript</li>
+                                <li>Chart.js</li>
+                                <li>Predictive Modeling</li>
+                                <li>Data Visualization</li>
+                            </ul>
+                            <a href="https://inventory-demand-forecasting-platfo.vercel.app/" target="_blank"
+                                class="text-cyber font-medium mt-4 hover:text-neon transition-colors duration-300 inline-flex items-center gap-2">Explore
+                                Live Deployment <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: TradeResearchAI -->
+                    <div class="project-card stagger-card">
+                        <div class="project-image-preview">
+                            <img src="assets/traderesearch.png" alt="TradeResearchAI Preview">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-folder"><i class="far fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/sinanmuhammedsk/TradeResearchAI" target="_blank"
+                                        aria-label="GitHub Link" style="margin-right: 12px;"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://traderesearchai.vercel.app/" target="_blank"
+                                        aria-label="Live Demo Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">TradeResearchAI - Market Sentiment Engine</h3>
+                            <div class="project-date">May 26 – Jun 26</div>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Developed an AI-governed financial market research workspace harvesting live
+                                        transcript feeds and corporate charts.</li>
+                                    <li>Architected natural language processing (NLP) models to derive textual sentiment
+                                        indices from corporate reports.</li>
+                                    <li>Engineered prediction datasets matching market swings with sentiment trends to
+                                        highlight buy/sell triggers.</li>
+                                    <li>Styled interactive data matrices and responsive financial dashboards under a
+                                        premium dark layout.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Python (ML)</li>
+                                <li>NLP (Sentiment Analysis)</li>
+                                <li>Financial Modeling</li>
+                                <li>Vercel Deploy</li>
+                            </ul>
+                            <a href="https://traderesearchai.vercel.app/" target="_blank"
+                                class="text-cyber font-medium mt-4 hover:text-neon transition-colors duration-300 inline-flex items-center gap-2">Explore
+                                Live Deployment <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: College Bus Tracking -->
+                    <div class="project-card stagger-card">
+                        <div class="project-image-preview">
+                            <img src="assets/bus_tracking.png" alt="College Bus Tracking Preview">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-folder"><i class="far fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/sinanmuhammedsk/College-Bus-Tracking-and-Management-System"
+                                        target="_blank" aria-label="GitHub Link" style="margin-right: 12px;"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://college-bus-tracking-and-management.vercel.app/" target="_blank"
+                                        aria-label="Live Demo Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">College Bus Tracking & Management System</h3>
+                            <div class="project-date">Jun 26 – Jul 26</div>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Engineered a relational database design containing 8+ tables, cascading
+                                        relationships, and audit sequences.</li>
+                                    <li>Built an in-memory SQL execution sandbox in JavaScript supporting standard
+                                        SELECT, INSERT, and DELETE statements.</li>
+                                    <li>Simulated PL/SQL triggers managing student pass generation, renewal warnings,
+                                        and distance-based fee structures.</li>
+                                    <li>Developed a dark glassmorphic control pane displaying real-time transport stats,
+                                        billing ledgers, and database tables.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Oracle SQL</li>
+                                <li>PL/SQL Simulator</li>
+                                <li>Database Design</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a href="https://college-bus-tracking-and-management.vercel.app/" target="_blank"
+                                class="text-cyber font-medium mt-4 hover:text-neon transition-colors duration-300 inline-flex items-center gap-2">Explore
+                                Live Deployment <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: SPAS -->
+                    <div class="project-card stagger-card">
+                        <div class="project-image-preview">
+                            <img src="assets/spas.png" alt="SPAS Preview">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="project-folder"><i class="far fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/sinanmuhammedsk/spas" target="_blank"
+                                        aria-label="GitHub Link" style="margin-right: 12px;"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://spas-zeta.vercel.app" target="_blank"
+                                        aria-label="Live Demo Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">SPAS - Student Performance Analysis System</h3>
+                            <div class="project-date">Jan 26 – Mar 26</div>
+                            <div class="project-description">
+                                <ul>
+                                    <li>Trained supervised machine learning models utilizing linear and tree regression
+                                        algorithms to predict student scores.</li>
+                                    <li>Evaluated ML system accuracy by calculating performance metrics, achieving high
+                                        R2 Score and validated MSE rates.</li>
+                                    <li>Performed extensive exploratory data analysis (EDA) mapping data distributions,
+                                        correlations, and feature weights.</li>
+                                    <li>Integrated prediction utilities in the client interface to output real-time
+                                        student performance projections.</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Machine Learning</li>
+                                <li>Scikit-Learn</li>
+                                <li>Regression</li>
+                                <li>Data Science</li>
+                            </ul>
+                            <a href="https://spas-zeta.vercel.app" target="_blank"
+                                class="text-cyber font-medium mt-4 hover:text-neon transition-colors duration-300 inline-flex items-center gap-2">Explore
+                                Live Deployment <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training & Certificates Section -->
+        <section id="training" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Training & Certifications</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="training-container">
+                    <h3 class="subsection-title fade-in"><i class="fas fa-laptop-code"></i> Professional Training</h3>
+                    <div class="timeline">
+                        <!-- Training 1 -->
+                        <div class="timeline-item stagger-card">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>PL/SQL & Data Science Bootcamp</h4>
+                                    <span class="timeline-date">Jun 25 – Aug 25</span>
+                                </div>
+                                <div class="timeline-subtitle">LPU Skill Development</div>
+                                <div class="timeline-cert-layout">
+                                    <div class="timeline-cert-description">
+                                        <p>Successfully completed a 50-hour intensive bootcamp covering database
+                                            programming and
+                                            data science concepts. Developed hands-on experience in SQL and PL/SQL
+                                            programming,
+                                            including stored procedures, triggers, indexing, query optimization, and
+                                            relational
+                                            database design principles for structured data systems. Performed data
+                                            preprocessing, exploratory data analysis (EDA), and implemented machine
+                                            learning
+                                            techniques.</p>
+                                        <div class="tech-tags">
+                                            <span>SQL</span><span>PL/SQL</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-cert-preview cursor-pointer"
+                                        data-cert="assets/image.png?v=update2"
+                                        data-link="https://drive.google.com/file/d/1OK_p0x9ShPb7xs2SZLxc2rLxlpVOJRyo/view">
+                                        <img src="assets/image.png?v=update2" alt="PL/SQL & Data Science | LPU">
+                                        <div class="cert-expand-overlay"><i class="fas fa-expand-alt"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Training 2 -->
+                        <div class="timeline-item stagger-card">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4>Data Science Training Program</h4>
+                                    <span class="timeline-date">Sep 23 – Oct 23</span>
+                                </div>
+                                <div class="timeline-subtitle">Acmegrade</div>
+                                <div class="timeline-cert-layout">
+                                    <div class="timeline-cert-description">
+                                        <p>Completed a 4-week training program focused on AI and Machine Learning
+                                            fundamentals
+                                            and real-world problem-solving. Explored core machine learning concepts,
+                                            emerging
+                                            technologies, and practical industry use cases across domains. Participated
+                                            in 12
+                                            guided learning sessions and hands-on technical activities as part of the
+                                            structured
+                                            skilling program.</p>
+                                        <div class="tech-tags">
+                                            <span>SQL</span><span>PL/SQL</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-cert-preview cursor-pointer"
+                                        data-cert="assets/cert_acmegrade.png"
+                                        data-link="https://drive.google.com/file/d/1gbh9fKQnVlcjzV3zPFb0JmjUDcsXflPl/view">
+                                        <img src="assets/cert_acmegrade.png" alt="Data Science & ML | Acmegrade">
+                                        <div class="cert-expand-overlay"><i class="fas fa-expand-alt"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-title fade-in mt-large"><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="certs-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Cert 1: Generative AI upGrad -->
+                        <div class="cert-card class-cert group relative h-[250px] w-full cursor-pointer overflow-hidden rounded-2xl"
+                            data-cert="assets/cert_generative_ai.png?v=update"
+                            data-link="https://drive.google.com/file/d/1WX8iNMJ22sEDZTkdRz1kk50ScZuLPXTC/view">
+                            <div class="relative w-full h-full duration-500">
+                                <!-- Front -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-slate-800 bg-slate-900/60 transition-opacity duration-300 group-hover:opacity-0 z-10">
+                                    <img src="assets/cert_generative_ai.png?v=update"
+                                        alt="Generative AI Workshop | upGrad" class="w-full h-3/5 object-cover">
+                                    <div class="p-4 h-2/5 flex flex-col justify-center">
+                                        <h4 class="text-xs font-bold text-white truncate">Generative AI Workshop</h4>
+                                        <span class="text-[10px] text-cyan-400 font-mono mt-1">upGrad • Jul 26</span>
+                                    </div>
+                                </div>
+                                <!-- Back (Hover) -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-cyan-500/30 bg-slate-950 p-4 flex flex-col justify-between opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-20">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-white">Generative AI</h4>
+                                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">Participant in upGrad
+                                            workshop exploring Large Language Models, prompt crafting, and context
+                                            retrieval applications.</p>
+                                    </div>
+                                    <span
+                                        class="text-[9px] text-cyan-400 font-mono border border-cyan-400/25 px-2 py-1 rounded w-fit select-none">TAP
+                                        FOR PREVIEW</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2: Python IIT Roorkee -->
+                        <div class="cert-card class-cert group relative h-[250px] w-full cursor-pointer overflow-hidden rounded-2xl"
+                            data-cert="assets/cert_python.png?v=update"
+                            data-link="https://drive.google.com/file/d/16W2Vr7FuWuhIzDrXuB_JfJXZLUucuCWt/view">
+                            <div class="relative w-full h-full duration-500">
+                                <!-- Front -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-slate-800 bg-slate-900/60 transition-opacity duration-300 group-hover:opacity-0 z-10">
+                                    <img src="assets/cert_python.png?v=update"
+                                        alt="Python hands-on training | IIT Roorkee" class="w-full h-3/5 object-cover">
+                                    <div class="p-4 h-2/5 flex flex-col justify-center">
+                                        <h4 class="text-xs font-bold text-white truncate">Python Hands-on Training</h4>
+                                        <span class="text-[10px] text-violet-400 font-mono mt-1">IIT Roorkee • Sep
+                                            24</span>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-violet-500/30 bg-slate-950 p-4 flex flex-col justify-between opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-20">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-white">Python Programming</h4>
+                                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">Hands-on Python
+                                            training organized by iHUB DivyaSampark, IIT Roorkee. Covered core features
+                                            and package handling.</p>
+                                    </div>
+                                    <span
+                                        class="text-[9px] text-violet-400 font-mono border border-violet-400/25 px-2 py-1 rounded w-fit select-none">TAP
+                                        FOR PREVIEW</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 3: Data Science Acmegrade -->
+                        <div class="cert-card class-cert group relative h-[250px] w-full cursor-pointer overflow-hidden rounded-2xl"
+                            data-cert="assets/cert_acmegrade.png?v=update"
+                            data-link="https://drive.google.com/file/d/1gbh9fKQnVlcjzV3zPFb0JmjUDcsXflPl/view">
+                            <div class="relative w-full h-full duration-500">
+                                <!-- Front -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-slate-800 bg-slate-900/60 transition-opacity duration-300 group-hover:opacity-0 z-10">
+                                    <img src="assets/cert_acmegrade.png?v=update" alt="Data Science & ML | Acmegrade"
+                                        class="w-full h-3/5 object-cover">
+                                    <div class="p-4 h-2/5 flex flex-col justify-center">
+                                        <h4 class="text-xs font-bold text-white truncate">Data Science Program</h4>
+                                        <span class="text-[10px] text-cyan-400 font-mono mt-1">Acmegrade • Sep 23</span>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-cyan-500/30 bg-slate-950 p-4 flex flex-col justify-between opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-20">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-white">Data Science & ML</h4>
+                                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">Completed technical
+                                            sessions on predictive datasets, regression modeling, and SQL database
+                                            interactions.</p>
+                                    </div>
+                                    <span
+                                        class="text-[9px] text-cyan-400 font-mono border border-cyan-400/25 px-2 py-1 rounded w-fit select-none">TAP
+                                        FOR PREVIEW</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 4: Board Infinity -->
+                        <div class="cert-card class-cert group relative h-[250px] w-full cursor-pointer overflow-hidden rounded-2xl"
+                            data-cert="assets/cert_boardinfinity.png?v=update"
+                            data-link="https://drive.google.com/file/d/1KgXGDlk3_7AnBotQSnfUszhG6N8buiz9/view">
+                            <div class="relative w-full h-full duration-500">
+                                <!-- Front -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-slate-800 bg-slate-900/60 transition-opacity duration-300 group-hover:opacity-0 z-10">
+                                    <img src="assets/cert_boardinfinity.png?v=update"
+                                        alt="Machine Learning Microlearning | Board Infinity"
+                                        class="w-full h-3/5 object-cover">
+                                    <div class="p-4 h-2/5 flex flex-col justify-center">
+                                        <h4 class="text-xs font-bold text-white truncate">ML Micro-learning</h4>
+                                        <span class="text-[10px] text-violet-400 font-mono mt-1">Board Infinity • Nov
+                                            23</span>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div
+                                    class="absolute inset-0 w-full h-full border border-violet-500/30 bg-slate-950 p-4 flex flex-col justify-between opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-20">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-white">Machine Learning Track</h4>
+                                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">Fundamental
+                                            certification highlighting statistical analytics workflows using Python
+                                            tools.</p>
+                                    </div>
+                                    <span
+                                        class="text-[9px] text-violet-400 font-mono border border-violet-400/25 px-2 py-1 rounded w-fit select-none">TAP
+                                        FOR PREVIEW</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section relative overflow-hidden bg-slate-950 py-24">
+            <div class="container relative z-10">
+                <div class="section-header fade-in mb-12">
+                    <h2
+                        class="section-title text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">
+                        Academic Transit Route</h2>
+                    <p class="text-slate-400 text-sm mt-3 font-mono">Hover or tap stations on the academic metro rail to
+                        trace educational nodes and GPA scores.</p>
+                    <div class="section-line bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+                </div>
+
+                <div class="relative w-full overflow-x-auto pb-4 scrollbar-thin">
+                    <div class="min-w-[800px] h-[220px] relative flex flex-col justify-center">
+                        <!-- Metro Track SVG -->
+                        <svg id="metro-svg" class="absolute w-full h-[100px] top-[60px] left-0 pointer-events-none z-0"
+                            viewBox="0 0 800 100">
+                            <!-- Base track -->
+                            <path d="M 80 50 L 320 50 L 560 50 L 720 50" stroke="rgba(255, 255, 255, 0.05)"
+                                stroke-width="12" stroke-linecap="round" fill="none" />
+                            <!-- Active track trail glow -->
+                            <path d="M 80 50 L 320 50 L 560 50 L 720 50" stroke="url(#metro-gradient)" stroke-width="6"
+                                stroke-linecap="round" fill="none" />
+                            <!-- Animated train pulse dots -->
+                            <path d="M 80 50 L 320 50 L 560 50 L 720 50" stroke="#22d3ee" stroke-width="2.5"
+                                stroke-dasharray="12, 35" stroke-linecap="round" fill="none"
+                                style="animation: dash 8s linear infinite;" />
+
+                            <defs>
+                                <linearGradient id="metro-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#06b6d4" />
+                                    <stop offset="50%" stop-color="#8b5cf6" />
+                                    <stop offset="100%" stop-color="#ec4899" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <!-- Station Indicators -->
+                        <div class="flex justify-between px-20 relative z-10 mt-[60px] transform -translate-y-1/2">
+                            <!-- Station 1: Sharjah School -->
+                            <div class="metro-station cursor-pointer group flex flex-col items-center"
+                                data-station="station-sharjah">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-slate-900 border-4 border-cyan-400 flex items-center justify-center text-cyan-400 text-xs font-bold group-hover:scale-110 shadow-[0_0_15px_rgba(6,182,212,0.4)] group-hover:shadow-[0_0_25px_rgba(6,182,212,0.7)] transition-all duration-300">
+                                    01</div>
+                                <span
+                                    class="mt-4 font-semibold text-xs tracking-wide text-slate-300 group-hover:text-white transition-colors">Sharjah
+                                    Indian School</span>
+                                <span class="text-[10px] text-cyan-400 font-mono mt-0.5">Matriculation</span>
+                            </div>
+
+                            <!-- Station 2: GGHSS Vadakara -->
+                            <div class="metro-station cursor-pointer group flex flex-col items-center"
+                                data-station="station-chorode">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-slate-900 border-4 border-violet-400 flex items-center justify-center text-violet-400 text-xs font-bold group-hover:scale-110 shadow-[0_0_15px_rgba(139,92,246,0.3)] group-hover:shadow-[0_0_25px_rgba(139,92,246,0.6)] transition-all duration-300">
+                                    02</div>
+                                <span
+                                    class="mt-4 font-semibold text-xs tracking-wide text-slate-300 group-hover:text-white transition-colors">GHSS
+                                    Chorode</span>
+                                <span class="text-[10px] text-violet-400 font-mono mt-0.5">Intermediate</span>
+                            </div>
+
+                            <!-- Station 3: LPU Phagwara -->
+                            <div class="metro-station cursor-pointer group flex flex-col items-center"
+                                data-station="station-lpu">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-slate-950 border-4 border-pink-500 flex items-center justify-center text-pink-500 text-sm group-hover:scale-105 shadow-[0_0_20px_rgba(236,72,153,0.4)] group-hover:shadow-[0_0_30px_rgba(236,72,153,0.7)] animate-pulse transition-all duration-300">
+                                    <i class="fas fa-graduation-cap text-xs"></i></div>
+                                <span class="mt-3 font-bold text-xs tracking-wide text-white transition-colors">Lovely
+                                    Professional Univ.</span>
+                                <span class="text-[10px] text-pink-400 font-mono mt-0.5">B.Tech CSE (DS & ML)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glass details panels -->
+                <div class="max-w-2xl mx-auto mt-8 min-h-[170px] relative">
+                    <!-- Default State panel -->
+                    <div
+                        class="metro-detail active-panel bg-gradient-to-br from-slate-900/80 to-slate-950/80 border border-slate-800/60 p-8 rounded-3xl backdrop-blur-xl text-center flex flex-col justify-center items-center shadow-xl">
+                        <div class="text-cyan-400 text-xl mb-3 animate-bounce"><i class="fas fa-subway"></i></div>
+                        <h3 class="text-sm font-semibold text-slate-205">Transit Control Deck</h3>
+                        <p class="text-slate-400 text-xs mt-1 leading-relaxed">System online. Tap any station indicator
+                            above to synchronize academic transcripts, timeframe metrics, and global scores.</p>
+                    </div>
+
+                    <!-- Sharjah Indian School Panel -->
+                    <div class="metro-detail hidden-panel opacity-0 translate-y-4 absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-950/85 border border-cyan-500/20 p-8 rounded-3xl backdrop-blur-xl flex flex-col justify-between shadow-2xl"
+                        id="station-sharjah">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 mb-3">
+                            <div>
+                                <h3 class="text-md font-bold text-white">Sharjah Indian School</h3>
+                                <p class="text-xs text-slate-400 mt-0.5"><i
+                                        class="fas fa-map-marker-alt text-cyan-400"></i> Sharjah, UAE</p>
+                            </div>
+                            <span
+                                class="badge border border-cyan-400/35 text-cyan-400 px-3 py-1 rounded-full text-xs font-mono">Jun
+                                2020 – May 2021</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500">Degree Focus</h4>
+                                <p class="text-sm font-semibold text-slate-200 mt-1">Matriculation Board Secondary
+                                    Education</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500">Global Score</h4>
+                                <p class="text-sm font-semibold text-cyan-400 mt-1">Percentage: 76.0%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GGHSS Vadakara Panel -->
+                    <div class="metro-detail hidden-panel opacity-0 translate-y-4 absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-950/85 border border-violet-500/20 p-8 rounded-3xl backdrop-blur-xl flex flex-col justify-between shadow-2xl"
+                        id="station-chorode">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 mb-3">
+                            <div>
+                                <h3 class="text-md font-bold text-white">Chorode Government Higher Secondary School</h3>
+                                <p class="text-xs text-slate-400 mt-0.5"><i
+                                        class="fas fa-map-marker-alt text-violet-400"></i> Vadakara, Keralam, India</p>
+                            </div>
+                            <span
+                                class="badge border border-violet-400/35 text-violet-400 px-3 py-1 rounded-full text-xs font-mono">Jun
+                                2021 – Apr 2023</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500">Degree Focus</h4>
+                                <p class="text-sm font-semibold text-slate-200 mt-1">Higher Secondary (Intermediate)</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500">Global Score</h4>
+                                <p class="text-sm font-semibold text-violet-405 mt-1 animate-pulse">Percentage: 85.8%
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lovely Professional University Panel -->
+                    <div class="metro-detail hidden-panel opacity-0 translate-y-4 absolute inset-0 bg-gradient-to-br from-slate-900/85 to-slate-955/85 border border-pink-500/20 p-8 rounded-3xl backdrop-blur-xl flex flex-col justify-between shadow-2xl"
+                        id="station-lpu">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 mb-3">
+                            <div>
+                                <h3 class="text-md font-bold text-white">Lovely Professional University</h3>
+                                <p class="text-xs text-slate-400 mt-0.5"><i
+                                        class="fas fa-map-marker-alt text-pink-400"></i> Phagwara, Punjab, India</p>
+                            </div>
+                            <span
+                                class="badge border border-pink-400/35 text-pink-400 px-3 py-1 rounded-full text-xs font-mono">Aug
+                                2023 – Present</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500">Degree & Focus
+                                </h4>
+                                <p class="text-sm font-semibold text-slate-200 mt-1">Bachelor of Technology (B. Tech)
+                                </p>
+                                <p class="text-xs text-pink-400 mt-1">Computer Science & Engineering (DS & ML)</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-mono uppercase tracking-wider text-slate-500">Global Score</h4>
+                                <p class="text-sm font-semibold text-pink-400 mt-1 animate-pulse">Cumulative CGPA: 6.67
+                                    / 10.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-slate-950 py-24 border-t border-slate-900">
+            <div class="container">
+                <div class="section-header fade-in mb-12">
+                    <h2
+                        class="section-title text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">
+                        Secure Transmission Node</h2>
+                    <p class="text-slate-400 text-sm mt-3 font-mono">Establish a direct data connection with Sinan's
+                        terminal core.</p>
+                    <div class="section-line bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+                </div>
+
+                <div
+                    class="max-w-2xl mx-auto bg-slate-950/80 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl backdrop-blur-xl">
+                    <!-- Console Titlebar -->
+                    <div class="bg-slate-900 px-6 py-4 flex items-center justify-between border-b border-slate-800">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded-full bg-red-500/80"></span>
+                            <span class="w-3.5 h-3.5 rounded-full bg-yellow-500/80"></span>
+                            <span class="w-3.5 h-3.5 rounded-full bg-green-500/80"></span>
+                        </div>
+                        <span class="text-xs font-mono text-slate-500 tracking-wider">SMS_SMTP_HOST_TUNNEL.sys</span>
+                        <div class="w-4"></div>
+                    </div>
+                    <!-- Console Body -->
+                    <div class="p-8 font-mono text-sm leading-relaxed" id="contact-terminal">
+                        <div class="text-cyan-450 mb-2">&gt;&gt; SECURE CHANNEL DETECTED. IP RESOLVED: 127.0.0.1</div>
+                        <div class="text-slate-400 mb-4">&gt;&gt; Input contact properties to transmit message
+                            package...</div>
+
+                        <form id="terminal-form" class="space-y-6">
+                            <!-- Name prompt -->
+                            <div class="flex flex-col gap-2">
+                                <label for="form-name"
+                                    class="text-violet-400 font-bold flex items-center gap-2"><span>[SYS_PROMPT_NAME]:</span><span
+                                        class="animate-pulse text-cyan-400">▮</span></label>
+                                <input type="text" id="form-name" required placeholder="system.ident"
+                                    class="w-full bg-slate-900 border border-slate-800 focus:border-cyan-400/50 rounded-lg px-4 py-3 text-slate-200 outline-none transition-all duration-300 font-mono">
+                            </div>
+
+                            <!-- Email prompt -->
+                            <div class="flex flex-col gap-2">
+                                <label for="form-email"
+                                    class="text-violet-400 font-bold flex items-center gap-2"><span>[SYS_PROMPT_EMAIL]:</span><span
+                                        class="animate-pulse text-cyan-400">▮</span></label>
+                                <input type="email" id="form-email" required placeholder="user@domain.com"
+                                    class="w-full bg-slate-900 border border-slate-800 focus:border-cyan-400/50 rounded-lg px-4 py-3 text-slate-200 outline-none transition-all duration-300 font-mono">
+                            </div>
+
+                            <!-- Message prompt -->
+                            <div class="flex flex-col gap-2">
+                                <label for="form-msg"
+                                    class="text-violet-400 font-bold flex items-center gap-2"><span>[SYS_PROMPT_MESSAGE]:</span><span
+                                        class="animate-pulse text-cyan-400">▮</span></label>
+                                <textarea id="form-msg" required rows="4" placeholder="awaiting input stream..."
+                                    class="w-full bg-slate-900 border border-slate-800 focus:border-cyan-400/50 rounded-lg px-4 py-3 text-slate-200 outline-none transition-all duration-300 font-mono resize-none"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/20 active:scale-[0.98] transition-all duration-200 tracking-wider flex items-center justify-center gap-3">
+                                <i class="fas fa-paper-plane text-xs"></i> TRANSMIT DATA STREAM
+                            </button>
+                        </form>
+
+                        <!-- Terminal status logs area -->
+                        <div id="terminal-logs" class="mt-6 space-y-2 border-t border-slate-800 pt-4 hidden">
+                            <div class="text-slate-500 mt-1">[SYSTEM] COMPILING DATA PACKETS...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <a href="#" class="logo footer-logo">S<span>M</span><span>S</span></a>
+                <p>Building data-driven solutions and efficient software.</p>
+            </div>
+            <div class="footer-social">
+                <a href="mailto:sinanmssk@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/sinanmuhammedsk" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/sinanmuhammedsk" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sinan Muhammed Shaman S K. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Certificates -->
+    <div id="cert-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-content" id="lightbox-img" src="" alt="Certificate View">
+            <div class="lightbox-caption-row"
+                style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; width: 100%; max-width: 80%; color: white; padding: 0 1rem; gap: 1rem;">
+                <div id="lightbox-caption" style="font-family: inherit; font-size: 0.95rem;"></div>
+                <a id="lightbox-verify-link" href="#" target="_blank" class="btn btn-outline"
+                    style="padding: 0.4rem 0.8rem; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; border-color: rgba(255,255,255,0.25); color: white; background: rgba(255,255,255,0.03); text-decoration: none; border-radius: 4px; transition: 0.2s;"><i
+                        class="fas fa-external-link-alt"></i> Verify Link</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP, Three.js, Lenis scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('click', (e) => {
+            console.log('--- GLOBAL CLICK TRACKER ---');
+            console.log('Target:', e.target);
+            console.log('Tag:', e.target.tagName);
+            console.log('Classes:', e.target.className);
+            console.log('ID:', e.target.id);
+        });
+    </script>
+</body>
+
+</html>
